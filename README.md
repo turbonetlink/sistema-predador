@@ -31,3 +31,29 @@ Abra o seu terminal e clone o projeto para a sua pasta de usuário:
 ```bash
 git clone [https://github.com/SEU_USUARIO/sistema-predador.git](https://github.com/SEU_USUARIO/sistema-predador.git)
 cd sistema-predador
+2. Liberar Execução (CHMOD)
+O comando chmod +x diz ao Linux que esses arquivos são programas confiáveis. Sem isso, o sistema não abre.
+
+Bash
+# Dá permissão ao script principal
+chmod +x predador.sh
+
+# Dá permissão ao arquivo de atalho
+chmod +x Predador.desktop
+3. Configurar o Atalho na Área de Trabalho
+Copie o arquivo Predador.desktop para sua pasta ~/Desktop (ou ~/Área de Trabalho).
+
+Importante: Clique com o botão direito no ícone que apareceu na sua tela e selecione "Allow Launching" (Permitir Execução). O ícone mudará de um "papel em branco" para o ícone de segurança.
+
+🛠️ Módulos Operacionais
+[ 1 ] CONSELHEIRO IA: Assistente geral (modelo abliterated).
+
+[ 2 ] ESPECIALISTA TI: Engenharia e Cibersegurança.
+
+[ 3 ] TRADUTOR TÁTICO: Inglês > Português.
+
+[ 4 ] RADAR GPS: Sincronia com modem Sierra Wireless.
+
+[ 5 ] DESENHISTA IA: Geração de imagens via Stable Diffusion.
+
+[ 6 ] MANUAL DE CAMPO: Guia rápido integrado.
