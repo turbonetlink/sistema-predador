@@ -25,6 +25,7 @@ Para que o sistema funcione sem erros, certifique-se de ter os seguintes pacotes
 ---
 
 ## 🚀 Guia de Instalação à Prova de Falhas
+o sistema de geracao de imagens ainda nao esta pronto ok
 
 ### Passo 1: Download do Repositório
 Abra o seu terminal e clone o projeto para a sua pasta de usuário:
