@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Predador v15.0
+Comment=Tactical Command Center
+Exec=qterminal -e sudo ./predador.sh
+Icon=security-high
+Terminal=false
+Type=Application
