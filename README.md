@@ -1,89 +1,45 @@
-# 🦅 SISTEMA PREDADOR - Tactical Command Center
+Markdown<div align="center">
 
-![Screenshot](./screenshot.jpg)
+# 🦅 SISTEMA PREDADOR v15.0
+### Tactical Command Center • Offline Intelligence
 
-## 📋 1. VISÃO GERAL
-O **Sistema Predador** é um painel de comando unificado via terminal para operações de Inteligência de Sinais (SIGINT), Radioamadorismo e assistência técnica em ambientes **100% Offline**. Desenvolvido para rodar em estações táticas (Panasonic Toughbook FZ-55) com DragonOS/Ubuntu.
+![OS](https://img.shields.io/badge/OS-Linux%20%7C%20DragonOS-blue?style=for-the-badge&logo=linux)
+![Shell](https://img.shields.io/badge/Shell-Bash-green?style=for-the-badge&logo=gnu-bash)
+![AI](https://img.shields.io/badge/Engine-Ollama-white?style=for-the-badge)
+![Hardware](https://img.shields.io/badge/Hardware-Toughbook%20FZ--55-red?style=for-the-badge)
+
+<br>
+<img src="./screenshot.jpg" alt="Painel Predador" width="800"/>
+
+> *Painel de comando unificado via terminal para operações de Inteligência de Sinais (SIGINT), Radioamadorismo e assistência técnica em ambientes **100% Offline**.*
+
+</div>
 
 ---
 
-## 🛠️ 2. INSTALAÇÃO DAS INTELIGÊNCIAS ARTIFICIAIS (OLLAMA)
-O Predador não funciona sem os modelos de IA instalados. Siga estes passos exatamente nesta ordem:
+## 📋 1. Visão Geral do Sistema
 
-**A) Instalar o motor Ollama:**
-Abra o terminal e cole:
+Projetado para arquitetura de estações táticas, o **Sistema Predador** faz a leitura direta do núcleo (Kernel) para telemetria em tempo real, fornecendo acesso instantâneo a modelos avançados de Inteligência Artificial, geradores de imagem tática e triangulação GPS sem necessidade de conexão com a internet.
+
+---
+
+## ⚙️ 2. Instalação do Motor de IA (Pré-requisito)
+
+O sistema exige o motor **Ollama** rodando em background. Abra seu terminal e execute os comandos abaixo na ordem:
+
+**1. Instale o Ollama:**
 ```bash
 curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh
-
-B) Baixar os modelos (Pull):
-Aguarde o download de cada um (precisa de internet nesta etapa):
-
-Bash
-ollama pull llama3:latest
+2. Baixe os modelos locais (Requer Internet nesta etapa):Bashollama pull llama3:latest
 ollama pull dolphin-llama3:latest
 ollama pull mannix/llama3.1-8b-abliterated:latest
-🚀 3. INSTALAÇÃO DO SCRIPT E PERMISSÕES (CHMOD)
-O Linux bloqueia a execução de scripts por segurança. Você DEVE liberar as permissões manualmente ou o sistema não abrirá.
-
-A) Baixe o projeto:
-
-Bash
+🚀 3. Deploy e Permissões (CHMOD)⚠️ ATENÇÃO: O Linux bloqueia a execução de scripts por padrão. Você DEVE aplicar as permissões abaixo para o sistema funcionar.Bash# 1. Clone o repositório
 git clone [https://github.com/turbonetlink/sistema-predador.git](https://github.com/turbonetlink/sistema-predador.git)
 cd sistema-predador
-B) Liberar execução (O segredo do funcionamento):
-Execute estes comandos para transformar os arquivos em programas executáveis:
 
-Bash
-# Permissão para o "cérebro" do sistema
+# 2. Libere a execução do script principal (Motor)
 chmod +x predador.sh
 
-# Permissão para o atalho visual
+# 3. Libere a execução do atalho visual
 chmod +x Predador.desktop
-🖥️ 4. CONFIGURANDO O ATALHO NA ÁREA DE TRABALHO
-Para usar como um Analista de TI profissional e abrir pelo ícone:
-
-Copie o arquivo Predador.desktop para sua pasta Desktop (ou Área de Trabalho).
-
-PASSO VITAL: Clique com o botão direito no ícone que apareceu na sua área de trabalho e selecione "Allow Launching" (Permitir Execução).
-
-O ícone mudará e agora você pode abrir o sistema com dois cliques.
-
-📟 5. OPERAÇÃO E MÓDULOS
-Para rodar direto pelo terminal: sudo ./predador.sh
-
-[ 1 ] CONSELHEIRO IA: Assistente sem filtros para emergências e rádio.
-
-[ 2 ] ESPECIALISTA TI: Suporte em engenharia e programação.
-
-[ 3 ] TRADUTOR: Tradução técnica imediata (Inglês > PT).
-
-[ 4 ] RADAR GPS: Sincroniza modem Sierra Wireless para mapas offline.
-
-[ 5 ] DESENHISTA IA: Geração de esquemas via Stable Diffusion (Offline).
-
-[ 6 ] MANUAL: Instruções rápidas de campo.
-
-⚠️ 6. MONITORAMENTO DE HARDWARE (TELEMETRIA)
-O sistema monitora seu Toughbook em tempo real:
-
-INDICADOR VERMELHO EM CALOR: CPU passou de 80°C. Pare o processamento de IA para resfriar.
-
-INDICADOR VERMELHO EM BATERIA: Menos de 20% de carga. Conecte à fonte de energia imediatamente.
-
-❓ 7. PERGUNTAS FREQUENTES (FAQ)
-"O script diz 'Permission Denied'!"
-
-Você pulou o Passo 3B. Execute chmod +x predador.sh na pasta do arquivo.
-
-"O GPS não encontra sinal!"
-
-O GPS precisa de visada direta para o céu. Se estiver dentro de um prédio de concreto, o modem Sierra terá dificuldade em sincronizar.
-
-"As IAs estão muito lentas!"
-
-O processamento é 100% local no seu i7. Verifique se não há outros processos pesados rodando no htop.
-
-👨‍💻 AUTOR
-Desenvolvido por Fabricio Cesar
-IT Analyst, Cybersecurity & Radioamador (Classe C)
-Estação de Operação: Panasonic Toughbook FZ-55
+🖥️ Configurando o Ícone no DesktopMova o arquivo Predador.desktop para a sua Área de Trabalho.Clique nele com o botão direito e selecione Allow Launching (Permitir Execução).O ícone genérico mudará para o escudo de segurança. Dê um duplo clique para iniciar.🛠️ 4. Módulos OperacionaisO painel é dividido em ferramentas táticas numeradas. Operação via terminal direto: sudo ./predador.shCódFerramentaDescrição e Uso[1]🤖 Conselheiro IAAssistente sem filtros (abliterated). Ideal para emergências e rádio.[2]💻 Especialista TIAssistente focado em lógica de programação e cibersegurança.[3]📖 Tradutor TáticoTradução técnica imediata de manuais (Inglês > Português).[4]📡 Radar GPSSincroniza modem Sierra Wireless para leitura em mapas offline.[5]🎨 Desenhista IAGeração de esquemas via Stable Diffusion. Salva em ~/Imagens/.[6]📚 Manual de CampoInstruções rápidas projetadas na própria tela do terminal.⚠️ 5. Alertas de Telemetria DinâmicaO sistema monitora seu hardware em tempo real com Inteligência Visual:🔴 CALOR ALTO (>80°C): O indicador fica vermelho. Recomenda-se pausar IAs pesadas.🔴 BATERIA BAIXA (<20%): O indicador fica vermelho. Desligue radares e conecte à energia.❓ 6. Solução de Problemas (FAQ)<details><summary><b>❌ O script acusa "Permission Denied" ou não abre?</b></summary>Você esqueceu de aplicar as permissões. Retorne ao Passo 3 e execute <code>chmod +x predador.sh</code> na pasta raiz do projeto.</details><details><summary><b>🛰️ O GPS não encontra satélites?</b></summary>A antena precisa de visada para o céu. Operações em bunkers ou prédios de concreto bloqueiam o sinal do Sierra Wireless.</details><details><summary><b>🐢 A resposta da IA está demorando muito?</b></summary>A inferência local depende 100% da sua CPU. Certifique-se de não estar rodando outras tarefas pesadas em background.</details><div align="center"><b>Desenvolvido por Fabricio Cesar</b><i>IT Analyst, Cybersecurity & Radioamador (Classe C)</i>Estação: Panasonic Toughbook FZ-55</div>
