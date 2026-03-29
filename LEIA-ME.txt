@@ -1,0 +1,61 @@
+=======================================================================
+           SISTEMA PREDADOR - MANUAL DE INSTALAÇÃO E USO
+=======================================================================
+
+Este é o guia definitivo para rodar o Sistema Predador offline no 
+seu Linux. Siga os passos abaixo NA ORDEM, sem pular nada.
+
+-----------------------------------------------------------------------
+PASSO 1: INSTALAR O MOTOR DE INTELIGÊNCIA ARTIFICIAL (OLLAMA)
+-----------------------------------------------------------------------
+O sistema precisa das IAs baixadas no seu computador para funcionar 
+offline. Abra o terminal e cole os comandos abaixo (precisa de internet):
+
+1. Instale o motor principal:
+   curl -fsSL https://ollama.com/install.sh | sh
+
+2. Baixe os 3 modelos que o Predador usa:
+   ollama pull llama3:latest
+   ollama pull dolphin-llama3:latest
+   ollama pull mannix/llama3.1-8b-abliterated:latest
+
+-----------------------------------------------------------------------
+PASSO 2: LIBERAR AS PERMISSÕES DO LINUX (CHMOD)
+-----------------------------------------------------------------------
+O Linux bloqueia arquivos de script por segurança. Você DEVE dar 
+permissão para que eles rodem. Abra o terminal na pasta onde 
+você salvou os arquivos do Predador e digite:
+
+   chmod +x predador.sh
+   chmod +x Predador.desktop
+
+Sem fazer isso, o sistema simplesmente não vai abrir.
+
+-----------------------------------------------------------------------
+PASSO 3: CRIAR O ATALHO NA ÁREA DE TRABALHO
+-----------------------------------------------------------------------
+1. Mova o arquivo "Predador.desktop" para a sua Área de Trabalho.
+2. Clique com o botão direito em cima dele na Área de Trabalho.
+3. Escolha a opção "Permitir Execução" (Allow Launching).
+4. O ícone vai mudar. Agora é só dar dois cliques para abrir o painel.
+
+-----------------------------------------------------------------------
+PASSO 4: COMO OPERAR O SISTEMA
+-----------------------------------------------------------------------
+Se preferir abrir direto pelo terminal, use o comando:
+   sudo ./predador.sh
+
+DICAS DE OPERAÇÃO:
+- TELEMETRIA: Fique de olho no painel superior. Se o "CALOR" (>80°C) 
+  ou a "BATERIA" (<20%) ficarem VERMELHOS, o hardware está no limite. 
+  Pare de processar IA para resfriar ou conecte o carregador.
+  
+- GPS: O "Radar GPS" (Opção 4) conecta com o modem Sierra Wireless. 
+  O Toughbook precisa estar perto de uma janela ou com visada para 
+  o céu para sincronizar os satélites corretamente.
+
+- PARA SAIR DAS IAs: Sempre digite /bye para encerrar a conversa.
+
+=======================================================================
+Desenvolvido por: Fabricio Cesar (IT Analyst & Radioamador Classe C)
+=======================================================================
